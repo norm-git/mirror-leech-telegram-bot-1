@@ -50,8 +50,8 @@ def _watch(bot, update, isZip=False, isLeech=False, pswd=None):
 
     if not is_url(link):
         help_msg = "Send link along with command line or by reply\n"
-        help_msg += "<b>Examples:</b> \n<code>/{BotCommands.WatchCommand}</code> link |newname pswd: mypassword(zip)"
-        help_msg += "\nBy replying to link: <code>/{BotCommands.WatchCommand}</code> |newname pswd: mypassword(zip)"
+        help_msg += f"<b>Examples:</b> \n<code>/{BotCommands.WatchCommand}</code> link |newname pswd: mypassword(zip)"
+        help_msg += f"\nBy replying to link: <code>/{BotCommands.WatchCommand}</code> |newname pswd: mypassword(zip)"
         return sendMessage(help_msg, bot, update)
 
     listener = MirrorListener(bot, update, isZip, isLeech=isLeech, pswd=pswd)
